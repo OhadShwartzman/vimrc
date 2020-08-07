@@ -2,7 +2,9 @@
 
 # The Ultimate vimrc
 
-Over the last 10 years, I have used and tweaked Vim. This configuration is the ultimate vimrc (or at least my version of it).
+This is forked ( well, stolen ) from amix/vimrc, I just added some of my bindings and custom configurations.
+
+amix/vimrc is really awesome by itself though.
 
 There are two versions:
 
@@ -127,20 +129,6 @@ I recommend reading the docs of these plugins to understand them better. Each pl
 * [vim-python-pep8-indent](https://github.com/Vimjas/vim-python-pep8-indent)
 
 
-## How to include your own stuff?
-
-After you have installed the setup, you can create **~/.vim_runtime/my_configs.vim** to fill in any configurations that are important for you. For instance, my **my_configs.vim** looks like this:
-
-	~/.vim_runtime (master)> cat my_configs.vim
-	map <leader>ct :cd ~/Desktop/Todoist/todoist<cr>
-	map <leader>cw :cd ~/Desktop/Wedoist/wedoist<cr> 
-
-You can also install your plugins, for instance, via pathogen you can install [vim-rails](https://github.com/tpope/vim-rails):
-
-	cd ~/.vim_runtime
-	git clone git://github.com/tpope/vim-rails.git my_plugins/vim-rails
-
-
 ## Key Mappings
 
 The [leader](http://learnvimscriptthehardway.stevelosh.com/chapters/06.html#leader) is `,`, so whenever you see `<leader>` it means `,`.
@@ -204,6 +192,16 @@ Toggle paste mode on and off:
 	
 	map <leader>pp :setlocal paste!<cr>
 
+
+Remove highlights:
+
+```
+    map Q :nohl<CR>
+```
+
+Show commit for current line:
+
+    map <leader>c
 
 ### Visual mode mappings
 
@@ -368,10 +366,3 @@ Cope mappings:
 Just do following:
 * Remove `~/.vim_runtime`
 * Remove any lines that reference `.vim_runtime` in your `~/.vimrc`
-
-
-## Looking for a remote-first job?
-
-Maintaining this Vim configuration isn't my day job. Daily I am the founder/CEO of [Doist](https://doist.com/). You could come and help us build the workplace of the future while living a balanced life (anywhere in the world 🌍🌎🌏).
-
-PS: Using Vim isn't a requirement 😄

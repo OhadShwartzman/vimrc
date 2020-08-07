@@ -118,7 +118,19 @@ set novisualbell
 set t_vb=
 set tm=500
 
-" Properly disable sound on errors on MacVim
+" show line numbers in insert mode, relative number in other
+set number
+set relativenumber
+
+autocmd InsertEnter * :set norelativenumber
+autocmd InsertLeave * :set relativenumber
+
+" show cursor line
+
+set cursorline
+
+
+"Properly disable sound on errors on MacVim
 if has("gui_macvim")
     autocmd GUIEnter * set vb t_vb=
 endif
