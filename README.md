@@ -134,28 +134,20 @@ I recommend reading the docs of these plugins to understand them better. Each pl
 The [leader](http://learnvimscriptthehardway.stevelosh.com/chapters/06.html#leader) is `,`, so whenever you see `<leader>` it means `,`.
 
 
-### Normal mode mappings
+### Ohad's recommended keybindings (The ones I use most)
+
+Show commit for current line:
+
+    map <leader>c
 
 Fast saving of a buffer (`<leader>w`):
 
 	nmap <leader>w :w!<cr>
-	
-Map `<Space>` to `/` (search) and `<Ctrl>+<Space>` to `?` (backwards search):
-	
-	map <space> /
-	map <C-space> ?
-	map <silent> <leader><cr> :noh<cr>
 
-Disable highlights when you press `<leader><cr>`:
+Disable highlights when you press `<leader><cr>` or `Q`:
 	
 	map <silent> <leader><cr> :noh<cr>
-
-Smart way to move between windows (`<ctrl>j` etc.):
-	
-	map <C-j> <C-W>j
-	map <C-k> <C-W>k
-	map <C-h> <C-W>h
-	map <C-l> <C-W>l
+    map Q :nohl<CR>
 
 Closing of the current buffer(s) (`<leader>bd` and (`<leader>ba`)):
 	
@@ -164,7 +156,24 @@ Closing of the current buffer(s) (`<leader>bd` and (`<leader>ba`)):
 	
 	" Close all buffers
 	map <leader>ba :1,1000 bd!<cr>
+
+### Normal mode mappings
+
 	
+Map `<Space>` to `/` (search) and `<Ctrl>+<Space>` to `?` (backwards search):
+	
+	map <space> /
+	map <C-space> ?
+	map <silent> <leader><cr> :noh<cr>
+
+
+Smart way to move between windows (`<ctrl>j` etc.):
+	
+	map <C-j> <C-W>j
+	map <C-k> <C-W>k
+	map <C-h> <C-W>h
+	map <C-l> <C-W>l	
+
 Useful mappings for managing tabs:
 	
 	map <leader>tn :tabnew<cr>
@@ -191,17 +200,6 @@ Quickly open a buffer for scripbble:
 Toggle paste mode on and off:
 	
 	map <leader>pp :setlocal paste!<cr>
-
-
-Remove highlights:
-
-```
-    map Q :nohl<CR>
-```
-
-Show commit for current line:
-
-    map <leader>c
 
 ### Visual mode mappings
 
