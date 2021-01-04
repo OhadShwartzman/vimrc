@@ -138,7 +138,7 @@ The [leader](http://learnvimscriptthehardway.stevelosh.com/chapters/06.html#lead
 
 Show commit for current line:
 
-    map <leader>c
+    map <leader>y
 
 Fast saving of a buffer (`<leader>w`):
 
