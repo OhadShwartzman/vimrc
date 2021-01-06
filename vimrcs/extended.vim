@@ -30,6 +30,7 @@ set guioptions-=L
 " Colorscheme
 set background=dark
 colorscheme peaksea
+hi cursorline cterm=NONE ctermbg=0
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
