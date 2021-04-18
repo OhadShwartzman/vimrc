@@ -32,8 +32,11 @@ set background=dark
 colorscheme peaksea
 hi cursorline cterm=NONE ctermbg=0
 
+" Set the signclumn to be the number column
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set signcolumn=number
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>e :e! ~/.vim_runtime/my_configs.vim<cr>

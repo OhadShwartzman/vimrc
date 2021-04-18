@@ -157,9 +157,11 @@ let g:ale_completion_enabled = 1
 
 let g:ale_linters = {
 \   'javascript': ['jshint'],
-\   'python': ['flake8'],
+\   'python': ['pyls', 'flake8'],
 \   'go': ['go', 'golint', 'errcheck'],
-\   'c++': ['clangd']
+\   'c++': ['clangd', 'g++'],
+\   'c': ['clangd', 'gcc'],
+\   'rust': ['rls', 'rustc']
 \}
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
@@ -171,6 +173,8 @@ let g:ale_set_highlights = 0
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 
+
+nnoremap <silent> gd :ALEGoToDefinition<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git gutter (Git diff)
