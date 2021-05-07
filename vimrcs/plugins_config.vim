@@ -164,6 +164,11 @@ let g:ale_linters = {
 \   'rust': ['rls', 'rustc']
 \}
 
+
+let g:ale_fixers = {
+\   'rust': ['rustfmt']
+\}
+
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
 
 " Disabling highlighting
