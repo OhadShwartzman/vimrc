@@ -161,9 +161,8 @@ let g:ale_linters = {
 \   'go': ['go', 'golint', 'errcheck'],
 \   'c++': ['clangd', 'g++'],
 \   'c': ['clangd', 'gcc'],
-\   'rust': ['rls', 'rustc']
+\   'rust': ['analyzer', 'rls', 'cargo']
 \}
-
 
 let g:ale_fixers = {
 \   'rust': ['rustfmt']
